@@ -1,5 +1,5 @@
-void reverseString(char stringVar[]){
-   
+
+void reverseString(char stringVar[]){   
     int length = 0;
     while(stringVar[length] != '\0'){
         length++;
