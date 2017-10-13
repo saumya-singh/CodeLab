@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CodeGrader</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="custom.css" type="text/css" />
+
+
+ <!-- <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="custom.css" type="text/css" />-->
+
+
+  <style>
+  nav{
+  width:100%;
+  
+  }
+  .carousel .item {
+  height: 300px;
+}
+
+.item img {
+    position: absolute;
+    top: 0;
+    left: 125px;
+	right:200px;
+    min-height: 300px;
+	min-width:900px;
+	
+}
+#bg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+#bg img {
+  position:fixed; 
+  top: 0; 
+  left:-50%; 
+   right:-50%;
+  bottom: 0; 
+  margin: auto; 
+  width: 100%;
+  height: 100%;
+}
+
+table{
+position:fixed;
+top:380px;
+left:630px;
+align:center;
+
+
+}
+
+	<script>
+$(document).ready(function(){
+    // Activate Carousel
+    $("#myCarousel").carousel();
+    
+    // Enable Carousel Indicators
+    $(".item1").click(function(){
+        $("#myCarousel").carousel(0);
+    });
+    $(".item2").click(function(){
+        $("#myCarousel").carousel(1);
+    });
+    $(".item3").click(function(){
+        $("#myCarousel").carousel(2);
+    });
+    $(".item4").click(function(){
+        $("#myCarousel").carousel(3);
+    });
+    
+    // Enable Carousel Controls
+    $(".left").click(function(){
+        $("#myCarousel").carousel("prev");
+    });
+    $(".right").click(function(){
+        $("#myCarousel").carousel("next");
+    });
+});
+</script>
+
+	
+}
+  }
+  </style>
+  <script>
+
+function myFunction() {
+    window.open("signout.html", "_parent", "toolbar=no, scrollbars=no, resizable=no,fullsreen=no, top=500, left=500, width=400, height=400");
+}
+</script>
+</head>
+<body>
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-6">
+<h1><p class="text-danger" style="font-size:50px;">CodeGrader</p></h1>
+	  
+    </div>
+      
+	<div class="col-md-6;">
+      <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://www.google.com"><img src="image/google.png" alt="Smiley face" height="42" width="42"></a></li>
+        <li><a href="https://www.facebook.com/"><img src="image/pra.png" alt="Smiley face" height="42" width="42"></a></li>
+        <li><a href="https://www.linkedin.com"><img src="image/link.png" alt="Smiley face" height="42" width="42"></a></li>
+		<!--<li><a href="https://www.gmail.com"><img src="image/g.png" alt="Smiley face" height="30" width="30"></a></li>-->
+		<li><a href="https://www.twitter.com"><img src="image/twit.png" alt="Smiley face" height="42" width="42"></a></li>
+      </ul>
+    </div>
+      
+    </div></div></div>
+
+<nav class="navbar navbar-inverse" style="width:100%;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active" style="font-size:20px;"><a href="index.html">HOME</a></li>
+        
+        <li style="font-size:20px;"><a href="aboutus.html">ABOUT US</a></li>
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li  style="font-size:20px;"><a href="register.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li  style="font-size:20px;"><a href="signin.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+ <div class="cover">
+  <div class="bg img">
+  <img src="image/header.jpg" alt="">
+
+<table style="width:auto;" align="center" frame="above" border=5px>
+<tr>
+<td style="font-size:100px;font-family:verdana;color:white;">CodeGrader</td>
+</tr>
+</table>
+<table style="position:fixed;top:510px;left:520px;" frame="below" border=5px>
+
+<tr>
+<td style="font-size:50px;font-family:verdana;color:white;">Welcome To A World Of Coding...</td>
+</tr>
+</table>
+
+
+   </div> 
+    </div>
+<script src="jquery-1.12.0.min.js"></script>
+
+<script type = "text/javascript"  src = "http://code.jquery.com/jquery-1.12.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

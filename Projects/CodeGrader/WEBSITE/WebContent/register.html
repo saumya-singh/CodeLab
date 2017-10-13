@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<html>
+<head>
+<title>
+first</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="custom.css" type="text/css" />
+<script src="jquery-1.12.0.min.js"></script>
+
+<script type = "text/javascript"  src = "http://code.jquery.com/jquery-1.12.1.min.js"></script>
+
+		
+     
+<script type="text/javascript">
+function match(){
+var fpass=document.myform.fpass.value;
+var mpass=document.myform.mpass.value;
+if(fpass==mpass)
+{
+return true;}
+else{
+alert("password must be same");
+return false;}
+}
+
+</script>
+
+
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.js"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-8">
+
+	 <div class="col-md-4">
+      <h1><p class="text-danger" style="font-size:50px;">CodeGrader</p></h1>
+	  
+	  
+
+	 </div>
+    </div>
+</div>
+
+
+	<div class="row">
+<nav class="navbar navbar-inverse" style="width:100%;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active" style="font-size:20px;"><a href="index.html">HOME</a></li>
+        
+        <li style="font-size:20px;"><a href="aboutus.html">ABOUT US</a></li>
+       
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li style="font-size:20px;"><a href="register.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li style="font-size:20px;"><a href="signin.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+	
+	<div class="row">
+	<div class="col-md-1"></div>
+	
+	<div class="col-md-6">
+	
+	 <br>
+	 
+	 
+<h2 style="font-size:50px">Register</h2><br>
+  <form name="myform" method="post" onsubmit="return match()" action="servlet/Register">
+    <div class="form-group">
+	<label for="firstname" style="font-size:20px;">Firstname:</label>
+	<input type="textbox" name="firstname"placeholder="Enter firstname"class="form-control">
+	</div>
+	<div class="form-group">
+	<label for="lastname" style="font-size:20px;">Lastname:</label>
+	<input type="textbox" name="lastname"placeholder="Enter lastname"class="form-control">
+	</div>
+	<div class="form-group">
+      <label for="emailid" style="font-size:20px;">Email:</label>
+      <input type="emailid" class="form-control" name="emailid" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="fpass" style="font-size:20px;">Password:</label>
+      <input type="password" class="form-control" name="fpass" placeholder="Enter password">
+    </div>
+	<div class="form-group">
+      <label for="mpass" style="font-size:20px;">Confirm Password:</label>
+      <input type="password" class="form-control" name="mpass" placeholder="Enter password">
+    </div>
+    <div class="formgroup">
+    <label for="gender" style="font-size:20px;">Gender:</label>
+     <input  style="font-size:20px;" type="radio" name="gender" value="male" checked> Male<br>
+  <input  style="font-size:20px;" type="radio" name="gender" value="female"> Female<br>
+    </div>
+    <div class="formgroup" style="font-size:20px;">
+    <label for="highestqualification">HighestQualification</label>
+    <SELECT id=select1 name=qualification
+      style="HEIGHT: 22px; WIDTH: 154px"> <OPTION >B.tech</OPTION>
+   <OPTION  >BCA</OPTION>
+   <OPTION >M.tech</OPTION>
+   <OPTION >MCA</OPTION></SELECT>
+    </div>
+    <div class="checkbox" style="font-size:20px;">
+      <label><input type="checkbox"> Remember me</label>
+    </div>
+    <button type="submit" class="btn btn-default" style="font-size:20px;" onclick="myFunction()">Submit</button>
+    <script>
+function myFunction() {
+    
+    if (confirm("Press a button!") == true) {
+    	 alert("registered");
+    } else {
+    	 alert("try again!");
+    }
+    
+</script>
+	<br>
+	
+  </form>
+	  </div>
+	  <div class="col-md-5"></div>
+	    
+  </body>
+  </html>

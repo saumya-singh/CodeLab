@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="ISO-8859-1">
+<title>CodeGrader</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="custom.css" type="text/css" />
+
+
+ <!-- <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="custom.css" type="text/css" />-->
+
+
+  <style>
+  nav{
+  width:100%;
+  
+  }
+  .carousel .item {
+  height: 300px;
+}
+
+.item img {
+    position: absolute;
+    top: 0;
+    left: 125px;
+	right:200px;
+    min-height: 300px;
+	min-width:900px;
+	
+}
+#bg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+#bg img {
+  position:fixed; 
+  top: 0; 
+  left:-50%; 
+   right:-50%;
+  bottom: 0; 
+  margin: auto; 
+  width: 100%;
+  height: 100%;
+}
+
+table{
+position:fixed;
+top:380px;
+left:630px;
+align:center;
+
+
+}
+<script>
+$(document).ready(function(){
+    // Activate Carousel
+    $("#myCarousel").carousel();
+    
+    // Enable Carousel Indicators
+    $(".item1").click(function(){
+        $("#myCarousel").carousel(0);
+    });
+    $(".item2").click(function(){
+        $("#myCarousel").carousel(1);
+    });
+    $(".item3").click(function(){
+        $("#myCarousel").carousel(2);
+    });
+    $(".item4").click(function(){
+        $("#myCarousel").carousel(3);
+    });
+    
+    // Enable Carousel Controls
+    $(".left").click(function(){
+        $("#myCarousel").carousel("prev");
+    });
+    $(".right").click(function(){
+        $("#myCarousel").carousel("next");
+    });
+});
+</script>
+
+	
+}
+  }
+  </style>
+  <script>
+  function myFunction() {
+	    window.open("signout.html", "_parent", "toolbar=no, scrollbars=no, resizable=no,fullsreen=no, top=500, left=500, width=400, height=400");
+	}
+	</script>
+</head>
+<body>
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-6">
+<h1><p class="text-danger" style="font-size:50px;">CodeGrader</p></h1>
+</div>
+	 <div class="col-md-6;">
+      <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+      <h1><time>00:00:00</time></h1> </ul>
+    
+     </div></div> 
+	
+      
+    </div></div>
+
+<!--<div class="container-fluid">
+<div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://www.google.com"><img src="gg.jpg" alt="Smiley face" height="30" width="30"></a></li>
+        <li><a href="https://www.facebook.com/"><img src="ff.png" alt="Smiley face" height="42" width="42"></a></li>
+        <li><a href="https://www.linkedin.com"><img src="li.png" alt="Smiley face" height="30" width="42"></a></li>
+		<li><a href="https://www.gmail.com"><img src="g.png" alt="Smiley face" height="30" width="30"></a></li>
+      </ul>
+    </div>
+
+<img src="l3.jpg" alt="Smiley face" width="200" height="100" style="float:left">
+  </div> -->    
+<nav class="navbar navbar-inverse" style="width:100%;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active" style="font-size:20px;"><a href="question1.html">1</a></li>
+        
+        <li style="font-size:20px;"><a href="question.html">2</a></li>
+          <li style="font-size:20px;"><a href="question3.html">3</a></li>
+        
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+<div class="problem">
+
+<h1 style="font-size:40px;font-style:verdana;color:#0B0B61;margin-left:0.5cm;"><u>problem 3-</u>How to Operate a Robot </h1></br>
+<p style="font-size:30px;font-style:verdana;color:#0B0B61;margin-left:0.5cm;"><u>problem statement-</u><br><pre style="font-size:20px;font-style:verdana;">
+There is s a square maze consisting of N rows and N columns divided into unit cells. The rows are numbered from the top to the bottom
+starting from 1, and the columns are numbered from the left to the right also starting from 1.
+You have a robot which you have to operate. Initially the robot is located in the upper-left corner of the maze (i.e. at the cell (1, 1)).
+In a single move you can move the robot in any one of four basic directions: left, right, up or down.
+Some cells of the maze are forbidden. It is known that there are no two forbidden cells that share an edge or a corner. The cell (1, 1) 
+is not forbidden.
+You have to construct a sequence of moves of the robot satisfying the following conditions.
+<ul><li>Robot never leaves the maze.
+<li>Robot never visits a forbidden cell.
+<li>Robot visits each non-forbidden cell of the maze at least once.</ul>
+You are interested in finding any valid sequence of moves such that there are no more than three consecutive moves that moved the robot in
+the same direction eg. 'DDDD' is invalid sequence of moves while 'D' and 'DDD' is valid. Also total number of moves should not be more than
+N * (N + 7). Please find any such sequence.
+
+<h1 style="font-size:30px;font-style:verdana;"><u>Input</u></h1>
+The first line of the input contains an integer T denoting the number of test cases. The description of T test cases follows.
+The first line of each test case contains the single integer N.
+In the next N lines, each line contains N characters representing the rows of maze. The characters can be one of the following ones:
+<ul><li>'.' denoting a non-forbidden cell.</li>
+<li>'#' denoting a forbidden cell.</li></ul>
+<h1 style="font-size:30px;font-style:verdana;"><u>output</u></h1>
+
+For each test case, output a single line containing the answer to the corresponding test case. The answer should be a string of characters 
+'L', 'R', 'U' and 'D', representing left, right, up and down moves, respectively. The answer for each test case should not contain more 
+than N*(N+7) moves.
+<h1 style="font-size:30px;font-style:verdana;"><u>Constraints</u></h1>
+<ul>
+<li>2<=T<=5</li>
+<li>2<=N<=1000</li>
+<li>It is guaranteed that there exists a valid sequence of moves containing no more than N * (N + 7) moves.</li>
+</ul>
+  
+
+ 
+<b>Example</b>
+ 
+<b>Input:</b>
+2
+2
+..
+.#
+3
+...
+#..
+..#
+ 
+<b>output:</b>
+DUR
+RRDLDL
+
+</pre>
+</div>
+Select a file to upload: <br />
+<form action="UploadServlet" method="post"
+                        enctype="multipart/form-data">
+<input type="file" name="file" size="50" />
+<br />
+<input type="submit" value="Upload File" />
+</form>
+
+ 
+
+</body>
+</html>

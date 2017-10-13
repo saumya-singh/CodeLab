@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)http://www.tutorialspoint.com/bootstrap/bootstrap_thumbnails.htm -->
+<html class=" js no-touch csstransforms3d csstransitions"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Basic -->
+<meta charset="utf-8">
+<title>Bootstrap Thumbnails</title>
+<meta name="description" content="Bootstrap Thumbnails - Learn Bootstrap in simple and easy steps starting from their overview, Environment Setup, Basic Structure, Global Styles, Grid System, Fluid Grid System, Layouts, Responsive Design, Typography, Forms, Buttons, Images, Icons, Dropdown, Button Groups, Navigation Elements, Navbar, Breadcrumb, Pagination, Labels, Badges, Typographic, Thumbnails, Alerts, Progress Bars, Media Object, Javascript Plugins like Transition, Modal, Dropdown, Scrollspy, Tab, Tooltip, Popover, Alert, Button, Collapse, Carousel, Typeahead, Affix, Glyphicons, Jumbotron, Demos.">
+<meta name="keywords" content="Bootstrap, Tutorial, Environment, Setup, Basic Structure, Global Styles, Grid System, Fluid Grid System, Layouts, Responsive Design, Typography, Forms, Buttons, Images, Icons, Dropdown, Button Groups, Navigation Elements, Navbar, Breadcrumb, Pagination, Labels, Badges, Typographic, Thumbnails, Progress Bars, Media Object, Javascript, Plugins, Transition, Modal, Scrollspy, Tab, Tooltip, Popover, Alert, Collapse, Carousel, Typeahead, Affix, Glyphicons, Jumbotron, Demos.">
+<!--<base href="http://www.tutorialspoint.com/">--><base href=".">
+<link rel="shortcut icon" href="http://www.tutorialspoint.com/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="fb:app_id" content="471319149685276">
+<meta property="og:site_name" content="www.tutorialspoint.com">
+<meta name="robots" content="index, follow">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="author" content="tutorialspoint.com">
+<script type="text/javascript" src="./Bootstrap Thumbnails_files/script-min-v4.js"></script>
+<link rel="stylesheet" href="http://www.tutorialspoint.com/theme/css/style-min.css">
+<!-- Head Libs -->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]-->
+<style>
+pre.prettyprint.tryit {min-height:37px; background: #eee url(/bootstrap/images/try-it.jpg) top right no-repeat !important}div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #5b4282 url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #5b4282 !important;}
+.submenu-item{ border-bottom: 2px solid #5b4282 !important; border-top: 2px solid #5b4282 !important }
+</style>
+<script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script>
+</head>
+<body onload="prettyPrint()" class="sticky-menu-active" style="padding-top: 111px;">
+<div class="wrapLoader">
+   <div class="imgLoader">
+      <img src="./Bootstrap Thumbnails_files/loading-cg.gif" alt="" width="70" height="70">
+   </div>
+</div>
+<header>
+   <div class="container">			
+      <h1 class="logo logo-sticky-active">
+      <a href="http://www.tutorialspoint.com/index.htm" title="tutorialspoint">
+      <img alt="tutorialspoint" src="./Bootstrap Thumbnails_files/logo.png" style="height: 40px; width: 137px; display: inline-block; top: 28px;">
+      </a>
+      </h1>			
+      <div class="search" id="searchBar">
+         <form method="get" class="searchform" name="searchform" action="http://www.google.com/search" target="_blank">
+            <input type="hidden" name="sitesearch" value="www.tutorialspoint.com">
+            <div class="input-group">
+               <input type="text" class="form-control search" name="q" autocomplete="off" placeholder="Search your tutorials..." onfocus="if (this.value == &#39;Search your tutorials...&#39;) {this.value = &#39;&#39;;}" onblur="if (this.value == &#39;&#39;) {this.value = &#39;Search your tutorials...&#39;;}">
+               <input value="FORID:11" name="cof" type="hidden">
+               <input type="hidden" name="ie" value="ISO-8859-1">
+               <span class="input-group-btn"> <button class="btn btn-default" type="submit" onclick="javascript:void(0);"><i class="icon icon-search"></i></button> </span>
+            </div>
+         </form>
+      </div>
+      <nav>
+         <ul class="nav nav-pills nav-top">
+            <li style="background: #F9EC18;     -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; border:1px solid #d6d6d6"> <a href="http://www.tutorialspoint.com/about/about_careers.htm"><i class="fa fa-thumbs-o-up"></i> &nbsp;We are hiring</a> </li>
+            <li> <a href="http://www.tutorialspoint.com/shared-tutorials.php"><i class="icon icon-user"></i> &nbsp;Shared</a> </li>
+            <li> <a href="http://www.tutorialspoint.com/articles/index.php"><i class="icon icon-file-text-o"></i> &nbsp;Articles</a> </li>
+            <li> <a href="http://www.tutorialspoint.com/questions_and_answers.htm"><i class="fa fa-question"></i> &nbsp;Quizzes</a> </li>
+            <li class="top-icons" style="display:none;">
+              <ul class="social-icons">
+              <li class="facebook"><a href="https://www.facebook.com/tutorialspointindia" target="_blank" data-placement="bottom" title="tutorialspoint @ Facebook">Facebook</a></li>
+              <li class="googleplus"><a href="https://plus.google.com/u/0/116678774017490391259/posts" target="_blank" data-placement="bottom" title="tutorialspoint @ Google+">Google+</a></li>
+              <li class="twitter"><a href="http://www.twitter.com/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Twitter">Twitter</a></li>
+              <li class="linkedin"><a href="http://www.linkedin.com/company/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Linkedin">Linkedin</a></li>
+              <li class="rss"><a href="http://feeds.feedburner.com/SharedTutorials" target="_blank" data-placement="bottom" title="tutorialspoint RSS">RSS</a></li>
+              </ul>
+           </li>
+         </ul>
+      </nav>
+         <!-- search code here  --> 
+      <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull" style="top: 1190px!important"> <i class="icon icon-bars"></i> </button>
+   </div>
+   <div class="navbar nav-main">
+      <div class="container">
+         <nav class="nav-main mega-menu">
+            <ul class="nav nav-pills nav-main" id="mainMenu">
+               <li class="dropdown no-sub-menu"> <a class="dropdown" href="http://www.tutorialspoint.com/index.htm"><i class="icon icon-home"></i> Home</a> </li>   
+               <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library  <i class="fa-caret-down"></i></span></a></li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="http://www.tutorialspoint.com/codingground.htm"><i class="fa-code"></i> Coding Ground </a> </li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="https://www.send18.com/" target="_blank"><i class="fa fa-send"></i>  Send18</a></li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="http://www.tutorialspoint.com/online_file_conversion.htm"><i class="icon icon-refresh"></i>  Conversion</a></li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="http://www.tutorialspoint.com/online_dev_tools.htm"><span class="dev-tools-menu">  Dev Tools</span></a></li>
+            </ul>
+         </nav>
+         <div class="submenu-item sub-main-menu" id="top-sub-menu"></div>
+      </div>
+   </div>	
+</header>
+<div style="clear:both;"></div>
+<div role="main" class="main">
+<div class="container">
+<div class="row">
+<div class="col-md-2">
+<aside class="sidebar">
+<div class="mini-logo">
+<img src="./Bootstrap Thumbnails_files/bootstrap-mini-logo.jpg" alt="Bootstrap Tutorial">
+</div>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Bootstrap Tutorial</li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/index.htm">Bootstrap - Home</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_overview.htm">Bootstrap - Overview</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_environment_setup.htm">Bootstrap - Environment Setup</a></li>
+</ul>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Bootstrap with CSS</li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_grid_system.htm">Bootstrap - Grid System</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_css_overview.htm">Bootstrap - CSS Overview</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_typography.htm">Bootstrap - Typography</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_code.htm">Bootstrap - Code</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_tables.htm">Bootstrap - Tables</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_forms.htm">Bootstrap - Forms</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_buttons.htm">Bootstrap - Buttons</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_images.htm">Bootstrap - Images</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_helper_classes.htm">Bootstrap - Helper Classes</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_responsive_utilities.htm">Bootstrap - Responsive utilities</a></li>
+</ul>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Bootstrap Layout Components</li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_glyphicons.htm">Bootstrap - Glyphicons</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_dropdowns.htm">Bootstrap - Drop downs</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_button_groups.htm">Bootstrap - Button Groups</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_button_dropdowns.htm">Bootstrap - Button Drop downs</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_input_groups.htm">Bootstrap - Input Groups</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_navigation_elements.htm">Bootstrap - Navigation Elements</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_navbar.htm">Bootstrap - Navbar</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_breadcrumb.htm">Bootstrap - Breadcrumb</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_pagination.htm">Bootstrap - Pagination</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_labels.htm">Bootstrap - Labels</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_badges.htm">Bootstrap - Badges</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_jumbotron.htm">Bootstrap - Jumbotron</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_page_header.htm">Bootstrap - Page Header</a></li>
+<li><a href="./Bootstrap Thumbnails_files/Bootstrap Thumbnails.html" style="background-color: rgb(214, 214, 214);">Bootstrap - Thumbnails</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_alerts.htm">Bootstrap - Alerts</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_progress_bars.htm">Bootstrap - Progress Bars</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_media_object.htm">Bootstrap - Media Object</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_list_group.htm">Bootstrap - List Group</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_panels.htm">Bootstrap - Panels</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_wells.htm">Bootstrap - Wells</a></li>
+</ul>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Bootstrap Plugins</li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_plugins_overview.htm">Bootstrap - Plugins Overview</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_transition_plugin.htm">Bootstrap - Transition Plugin</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_modal_plugin.htm">Bootstrap - Modal Plugin</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_dropdown_plugin.htm">Bootstrap - Dropdown Plugin</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_scrollspy_plugin.htm">Bootstrap - Scrollspy Plugin</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_tab_plugin.htm">Bootstrap - Tab Plugin</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_tooltip_plugin.htm">Bootstrap - Tooltip Plugin</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_popover_plugin.htm">Bootstrap - Popover Plugin</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_alert_plugin.htm">Bootstrap - Alert Plugin</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_button_plugin.htm">Bootstrap - Button Plugin</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_collapse_plugin.htm">Bootstrap - Collapse Plugin</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_carousel_plugin.htm">Bootstrap - Carousel Plugin</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_affix_plugin.htm">Bootstrap - Affix Plugin</a></li>
+</ul>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Bootstrap Demos</li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_grid_demo.htm">Bootstrap - Grid Demo</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_table_demo.htm">Bootstrap - Table Demo</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_form_demo.htm">Bootstrap - Form Demo</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_buttons_demo.htm">Bootstrap - Buttons Demo</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_images_demo.htm">Bootstrap - Images Demo</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_responsive_demo.htm">Bootstrap - Responsive Demo</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_navigation_demo.htm">Bootstrap - Navigation Demo</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_blog_demo.htm">Bootstrap - Blog Demo</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_material_design_demo.htm">Bootstrap - Material Design Demo</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_slider_demo.htm">Bootstrap - Slider Demo</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_timeline_demo.htm">Bootstrap - Time line Demo</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_alert_demo.htm">Bootstrap - Alert Demo</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_admin_interface_demo.htm">Bootstrap - Admin Interface Demo</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_ajax_demo.htm">Bootstrap - Ajax Demo</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_tabbed_slider_demo.htm">Bootstrap - Tabbed slider Demo</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_caption_demo.htm">Bootstrap - Caption Demo</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_map_demo.htm">Bootstrap - Map Demo</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_calender_demo.htm">Bootstrap - Calendar Demo</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_social_icons_demo.htm">Bootstrap - Social Icons Demo</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_icons_demo.htm">Bootstrap - Icons Demo</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_featured_demo.htm">Bootstrap - featured Demo</a></li>
+</ul>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Bootstrap Useful Resources</li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_questions_answers.htm">Bootstrap - Questions and Answers</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_quick_guide.htm">Bootstrap - Quick Guide</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_useful_resources.htm">Bootstrap - Useful Resources</a></li>
+<li><a href="http://www.tutorialspoint.com/bootstrap/bootstrap_discussion.htm">Bootstrap - Discussion</a></li>
+</ul>
+<ul class="nav nav-list primary push-bottom left-menu special">
+<li class="sreading">Selected Reading</li>
+<li><a target="_top" href="http://www.tutorialspoint.com/developers_best_practices/index.htm">Developer's Best Practices</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/questions_and_answers.htm">Questions and Answers</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/effective_resume_writing.htm">Effective Resume Writing</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/hr_interview_questions/index.htm">HR Interview Questions</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/computer_glossary.htm">Computer Glossary</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/computer_whoiswho.htm">Who is Who</a></li>
+</ul>
+</aside>
+</div>
+<!-- PRINTING STARTS HERE -->
+<div class="row">
+<div class="content">
+<div class="col-md-7 middle-col">
+<h1>Bootstrap - Thumbnails</h1>
+<div class="topgooglead">
+<hr>
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+google_ad_channel = "";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> 
+</script>
+</div>
+<hr>
+<div class="pre-btn">
+<a href="http://www.tutorialspoint.com/bootstrap/bootstrap_page_header.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a>
+</div>
+<div class="nxt-btn">
+<a href="http://www.tutorialspoint.com/bootstrap/bootstrap_alerts.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a>
+</div>
+<div class="clearer"></div>
+<hr>
+<p>This chapter discusses about Bootstrap thumbnails. A lot of sites need a way to lay out images, videos, text, etc, in a grid, and Bootstrap has an easy way to do this with thumbnails. To create thumbnails using Bootstrap −</p>
+<ul class="list">
+<li><p>Add an &lt;a&gt; tag with the class of <b>.thumbnail</b> around an image.</p></li>
+<li><p>This adds four pixels of padding and a gray border.</p></li>
+<li><p>On hover, an animated glow outlines the image.</p></li>
+</ul>
+<p>The following example demonstrates a default thumbnail −</p>
+<pre class="prettyprint notranslate tryit prettyprinted" style="cursor: default;"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"row"</span><span class="tag">&gt;</span><span class="pln">
+   
+   </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"col-sm-6 col-md-3"</span><span class="tag">&gt;</span><span class="pln">
+      </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"thumbnail"</span><span class="tag">&gt;</span><span class="pln">
+         </span><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">src</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"/bootstrap/images/kittens.jpg"</span><span class="pln"> </span><span class="atn">alt</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"Generic placeholder thumbnail"</span><span class="tag">&gt;</span><span class="pln">
+      </span><span class="tag">&lt;/a&gt;</span><span class="pln">
+   </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+   
+   </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"col-sm-6 col-md-3"</span><span class="tag">&gt;</span><span class="pln">
+      </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"thumbnail"</span><span class="tag">&gt;</span><span class="pln">
+         </span><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">src</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"/bootstrap/images/kittens.jpg"</span><span class="pln"> </span><span class="atn">alt</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"Generic placeholder thumbnail"</span><span class="tag">&gt;</span><span class="pln">
+      </span><span class="tag">&lt;/a&gt;</span><span class="pln">
+   </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+   
+   </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"col-sm-6 col-md-3"</span><span class="tag">&gt;</span><span class="pln">
+      </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"thumbnail"</span><span class="tag">&gt;</span><span class="pln">
+         </span><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">src</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"/bootstrap/images/kittens.jpg"</span><span class="pln"> </span><span class="atn">alt</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"Generic placeholder thumbnail"</span><span class="tag">&gt;</span><span class="pln">
+      </span><span class="tag">&lt;/a&gt;</span><span class="pln">
+   </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+   
+   </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"col-sm-6 col-md-3"</span><span class="tag">&gt;</span><span class="pln">
+      </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"thumbnail"</span><span class="tag">&gt;</span><span class="pln">
+         </span><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">src</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"/bootstrap/images/kittens.jpg"</span><span class="pln"> </span><span class="atn">alt</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"Generic placeholder thumbnail"</span><span class="tag">&gt;</span><span class="pln">
+      </span><span class="tag">&lt;/a&gt;</span><span class="pln">
+   </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+   
+</span><span class="tag">&lt;/div&gt;</span></pre>
+<img src="./Bootstrap Thumbnails_files/thumbnail_demo.jpg" alt="Thumbnail Demo">
+<h2>Adding Custom Content</h2>
+<p>Now that we have a basic thumbnail, it's possible to add any kind of HTML content like headings, paragraphs, or buttons into thumbnails. Follow the steps below −</p>
+<ul class="list">
+<li><p>Change the &lt;a&gt; tag that has a class of <b>.thumbnail</b> to a &lt;div&gt;.</p></li>
+<li><p>Inside of that &lt;div&gt;, you can add anything you need. As this is a &lt;div&gt;, we can use the default span-based naming convention for sizing.</p></li>
+<li><p>If you want to group multiple images, place them in an unordered list, and each list item will be floated to the left.</p></li>
+</ul>
+<p>The following example demonstrates this −</p>
+<pre class="prettyprint notranslate tryit prettyprinted" style="cursor: default;"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"row"</span><span class="tag">&gt;</span><span class="pln">
+   
+   </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"col-sm-6 col-md-3"</span><span class="tag">&gt;</span><span class="pln">
+      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"thumbnail"</span><span class="tag">&gt;</span><span class="pln">
+         </span><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">src</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"/bootstrap/images/kittens.jpg"</span><span class="pln"> </span><span class="atn">alt</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"Generic placeholder thumbnail"</span><span class="tag">&gt;</span><span class="pln">
+      </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+      
+      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"caption"</span><span class="tag">&gt;</span><span class="pln">
+         </span><span class="tag">&lt;h3&gt;</span><span class="pln">Thumbnail label</span><span class="tag">&lt;/h3&gt;</span><span class="pln">
+         </span><span class="tag">&lt;p&gt;</span><span class="pln">Some sample text. Some sample text.</span><span class="tag">&lt;/p&gt;</span><span class="pln">
+         
+         </span><span class="tag">&lt;p&gt;</span><span class="pln">
+            </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"btn btn-primary"</span><span class="pln"> </span><span class="atn">role</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"button"</span><span class="tag">&gt;</span><span class="pln">
+               Button
+            </span><span class="tag">&lt;/a&gt;</span><span class="pln"> 
+            
+            </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"btn btn-default"</span><span class="pln"> </span><span class="atn">role</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"button"</span><span class="tag">&gt;</span><span class="pln">
+               Button
+            </span><span class="tag">&lt;/a&gt;</span><span class="pln">
+         </span><span class="tag">&lt;/p&gt;</span><span class="pln">
+         
+      </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+   </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+   
+   </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"col-sm-6 col-md-3"</span><span class="tag">&gt;</span><span class="pln">
+      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"thumbnail"</span><span class="tag">&gt;</span><span class="pln">
+         </span><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">src</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"/bootstrap/images/kittens.jpg"</span><span class="pln"> </span><span class="atn">alt</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"Generic placeholder thumbnail"</span><span class="tag">&gt;</span><span class="pln">
+      </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+      
+      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"caption"</span><span class="tag">&gt;</span><span class="pln">
+         </span><span class="tag">&lt;h3&gt;</span><span class="pln">Thumbnail label</span><span class="tag">&lt;/h3&gt;</span><span class="pln">
+         </span><span class="tag">&lt;p&gt;</span><span class="pln">Some sample text. Some sample text.</span><span class="tag">&lt;/p&gt;</span><span class="pln">
+         
+         </span><span class="tag">&lt;p&gt;</span><span class="pln">
+            </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"btn btn-primary"</span><span class="pln"> </span><span class="atn">role</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"button"</span><span class="tag">&gt;</span><span class="pln">
+               Button
+            </span><span class="tag">&lt;/a&gt;</span><span class="pln"> 
+            
+            </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"btn btn-default"</span><span class="pln"> </span><span class="atn">role</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"button"</span><span class="tag">&gt;</span><span class="pln">
+               Button
+            </span><span class="tag">&lt;/a&gt;</span><span class="pln">
+         </span><span class="tag">&lt;/p&gt;</span><span class="pln">
+         
+      </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+   </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+   
+   </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"col-sm-6 col-md-3"</span><span class="tag">&gt;</span><span class="pln">
+      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"thumbnail"</span><span class="tag">&gt;</span><span class="pln">
+         </span><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">src</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"/bootstrap/images/kittens.jpg"</span><span class="pln"> </span><span class="atn">alt</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"Generic placeholder thumbnail"</span><span class="tag">&gt;</span><span class="pln">
+      </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+      
+      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"caption"</span><span class="tag">&gt;</span><span class="pln">
+         </span><span class="tag">&lt;h3&gt;</span><span class="pln">Thumbnail label</span><span class="tag">&lt;/h3&gt;</span><span class="pln">
+         </span><span class="tag">&lt;p&gt;</span><span class="pln">Some sample text. Some sample text.</span><span class="tag">&lt;/p&gt;</span><span class="pln">
+         
+         </span><span class="tag">&lt;p&gt;</span><span class="pln">
+            </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"btn btn-primary"</span><span class="pln"> </span><span class="atn">role</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"button"</span><span class="tag">&gt;</span><span class="pln">
+               Button
+            </span><span class="tag">&lt;/a&gt;</span><span class="pln"> 
+            
+            </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"btn btn-default"</span><span class="pln"> </span><span class="atn">role</span><span class="pln"> </span><span class="pun">=</span><span class="atv">" button"</span><span class="tag">&gt;</span><span class="pln">
+               Button
+            </span><span class="tag">&lt;/a&gt;</span><span class="pln">
+         </span><span class="tag">&lt;/p&gt;</span><span class="pln">
+         
+      </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+   </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+   
+   </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"col-sm-6 col-md-3"</span><span class="tag">&gt;</span><span class="pln">
+      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"thumbnail"</span><span class="tag">&gt;</span><span class="pln">
+         </span><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">src</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"/bootstrap/images/kittens.jpg"</span><span class="pln"> </span><span class="atn">alt</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"Generic placeholder thumbnail"</span><span class="tag">&gt;</span><span class="pln">
+      </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+      
+      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"caption"</span><span class="tag">&gt;</span><span class="pln">
+         </span><span class="tag">&lt;h3&gt;</span><span class="pln">Thumbnail label</span><span class="tag">&lt;/h3&gt;</span><span class="pln">
+         </span><span class="tag">&lt;p&gt;</span><span class="pln">Some sample text. Some sample text.</span><span class="tag">&lt;/p&gt;</span><span class="pln">
+         
+         </span><span class="tag">&lt;p&gt;</span><span class="pln">
+            </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"btn btn-primary"</span><span class="pln"> </span><span class="atn">role</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"button"</span><span class="tag">&gt;</span><span class="pln">
+               Button
+            </span><span class="tag">&lt;/a&gt;</span><span class="pln"> 
+            
+            </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"btn btn-default"</span><span class="pln"> </span><span class="atn">role</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"button"</span><span class="tag">&gt;</span><span class="pln">
+               Button
+            </span><span class="tag">&lt;/a&gt;</span><span class="pln">
+         </span><span class="tag">&lt;/p&gt;</span><span class="pln">
+         
+      </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+   </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+   
+</span><span class="tag">&lt;/div&gt;</span></pre>
+<img src="./Bootstrap Thumbnails_files/customthumbnail_demo.jpg" alt="Custom Thumbnail Demo">
+<hr>
+<div class="pre-btn">
+<a href="http://www.tutorialspoint.com/bootstrap/bootstrap_page_header.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a>
+</div>
+<div class="print-btn center">
+<a href="http://www.tutorialspoint.com/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a>
+</div>
+<div class="nxt-btn">
+<a href="http://www.tutorialspoint.com/bootstrap/bootstrap_alerts.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a>
+</div>
+<hr>
+<!-- PRINTING ENDS HERE -->
+<div class="bottomgooglead">
+<div class="bottomadtag">Advertisements</div>
+<script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3" id="rightbar">
+<div class="simple-ad">
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;http://www.facebook.com/sharer.php?u=&#39; + &#39;http://www.tutorialspoint.com/bootstrap/bootstrap_thumbnails.htm&#39;,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./Bootstrap Thumbnails_files/facebookIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;http://twitter.com/share?url=&#39; + &#39;http://www.tutorialspoint.com/bootstrap/bootstrap_thumbnails.htm&#39;,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./Bootstrap Thumbnails_files/twitterIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;https://www.linkedin.com/cws/share?url=&#39; + &#39;http://www.tutorialspoint.com/bootstrap/bootstrap_thumbnails.htm&amp;title=&#39;+ document.title,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./Bootstrap Thumbnails_files/linkedinIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;https://plus.google.com/share?url=http://www.tutorialspoint.com/bootstrap/bootstrap_thumbnails.htm&#39;,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./Bootstrap Thumbnails_files/googlePlusIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/bootstrap/bootstrap_thumbnails.htm&amp;title=&#39;+ document.title,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./Bootstrap Thumbnails_files/StumbleUponIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;http://reddit.com/submit?url=http://www.tutorialspoint.com/bootstrap/bootstrap_thumbnails.htm&amp;title=&#39;+ document.title,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=656,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./Bootstrap Thumbnails_files/reddit.jpg" alt="img">
+</a>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="footer-copyright">
+<div class="container">
+<div class="row">
+<div class="col-md-1">
+<a href="http://www.tutorialspoint.com/index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="./Bootstrap Thumbnails_files/logo-footer.png"> </a>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+   <nav id="sub-menu">
+      <ul>
+         <li><a href="http://www.tutorialspoint.com/about/tutorials_writing.htm">Write for us</a></li>
+         <li><a href="http://www.tutorialspoint.com/about/faq.htm">FAQ's</a></li>
+         <li><a href="http://www.tutorialspoint.com/about/about_helping.htm">Helping</a></li>
+         <li><a href="http://www.tutorialspoint.com/about/contact_us.htm">Contact</a></li>
+      </ul>
+   </nav>
+</div>
+<div class="col-md-3 col-sm-12 col-xs-12">
+<p>© Copyright 2016. All Rights Reserved.</p>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+   <div class="news-group">
+      <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == &#39;Enter email for newsletter...&#39;) {this.value = &#39;&#39;;}" onblur="if (this.value == &#39;&#39;) {this.value = &#39;Enter email for newsletter...&#39;;}">
+      <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span>
+      <div id="newsresponse"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Libs -->
+<script type="text/javascript" src="./Bootstrap Thumbnails_files/custom-min.js"></script><a class="scroll-to-top visible" href="http://www.tutorialspoint.com/#" id="scrollToTop"><i class="icon icon-chevron-up icon-white"></i></a>
+<script src="http://www.google-analytics.com/urchin.js">
+</script>
+<script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script>
+<script type="text/javascript" src="./Bootstrap Thumbnails_files/jquery.colorbox-min.js"></script>
+<script type="text/javascript" src="./Bootstrap Thumbnails_files/trybootstrap.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  var tryit = new $.TryIt('/bootstrap/try_bootstrap.php');
+  tryit.compile();
+});
+</script>
+
+
+
+<div class="autocomplete-suggestions " style="top: 1244px; left: 929.5px; width: 345px;"></div><div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div><div id="source" style="display:none;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+   &lt;title&gt;Try v1.2 Bootstrap Online&lt;/title&gt;
+   &lt;link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet"&gt;
+   &lt;script src="/scripts/jquery.min.js"&gt;&lt;/script&gt;
+   &lt;script src="/bootstrap/js/bootstrap.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class = "row"&gt;
+   
+   &lt;div class = "col-sm-6 col-md-3"&gt;
+      &lt;div class = "thumbnail"&gt;
+         &lt;img src = "/bootstrap/images/kittens.jpg" alt = "Generic placeholder thumbnail"&gt;
+      &lt;/div&gt;
+      
+      &lt;div class = "caption"&gt;
+         &lt;h3&gt;Thumbnail label&lt;/h3&gt;
+         &lt;p&gt;Some sample text. Some sample text.&lt;/p&gt;
+         
+         &lt;p&gt;
+            &lt;a href = "#" class = "btn btn-primary" role = "button"&gt;
+               Button
+            &lt;/a&gt; 
+            
+            &lt;a href = "#" class = "btn btn-default" role = "button"&gt;
+               Button
+            &lt;/a&gt;
+         &lt;/p&gt;
+         
+      &lt;/div&gt;
+   &lt;/div&gt;
+   
+   &lt;div class = "col-sm-6 col-md-3"&gt;
+      &lt;div class = "thumbnail"&gt;
+         &lt;img src = "/bootstrap/images/kittens.jpg" alt = "Generic placeholder thumbnail"&gt;
+      &lt;/div&gt;
+      
+      &lt;div class = "caption"&gt;
+         &lt;h3&gt;Thumbnail label&lt;/h3&gt;
+         &lt;p&gt;Some sample text. Some sample text.&lt;/p&gt;
+         
+         &lt;p&gt;
+            &lt;a href = "#" class = "btn btn-primary" role = "button"&gt;
+               Button
+            &lt;/a&gt; 
+            
+            &lt;a href = "#" class = "btn btn-default" role = "button"&gt;
+               Button
+            &lt;/a&gt;
+         &lt;/p&gt;
+         
+      &lt;/div&gt;
+   &lt;/div&gt;
+   
+   &lt;div class = "col-sm-6 col-md-3"&gt;
+      &lt;div class = "thumbnail"&gt;
+         &lt;img src = "/bootstrap/images/kittens.jpg" alt = "Generic placeholder thumbnail"&gt;
+      &lt;/div&gt;
+      
+      &lt;div class = "caption"&gt;
+         &lt;h3&gt;Thumbnail label&lt;/h3&gt;
+         &lt;p&gt;Some sample text. Some sample text.&lt;/p&gt;
+         
+         &lt;p&gt;
+            &lt;a href = "#" class = "btn btn-primary" role = "button"&gt;
+               Button
+            &lt;/a&gt; 
+            
+            &lt;a href = "#" class = "btn btn-default" role =" button"&gt;
+               Button
+            &lt;/a&gt;
+         &lt;/p&gt;
+         
+      &lt;/div&gt;
+   &lt;/div&gt;
+   
+   &lt;div class = "col-sm-6 col-md-3"&gt;
+      &lt;div class = "thumbnail"&gt;
+         &lt;img src = "/bootstrap/images/kittens.jpg" alt = "Generic placeholder thumbnail"&gt;
+      &lt;/div&gt;
+      
+      &lt;div class = "caption"&gt;
+         &lt;h3&gt;Thumbnail label&lt;/h3&gt;
+         &lt;p&gt;Some sample text. Some sample text.&lt;/p&gt;
+         
+         &lt;p&gt;
+            &lt;a href = "#" class = "btn btn-primary" role = "button"&gt;
+               Button
+            &lt;/a&gt; 
+            
+            &lt;a href = "#" class = "btn btn-default" role = "button"&gt;
+               Button
+            &lt;/a&gt;
+         &lt;/p&gt;
+         
+      &lt;/div&gt;
+   &lt;/div&gt;
+   
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</div><div id="supportsource" style="display:none;"></div><div id="utilsource" style="display:none;"></div><div id="extrasource" style="display:none;"></div><div id="inputs" style="display:none;"></div><div id="filename" style="display:none;"></div></body></html>

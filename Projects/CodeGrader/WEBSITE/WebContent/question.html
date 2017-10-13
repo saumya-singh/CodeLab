@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="ISO-8859-1">
+<title>CodeGrader</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="custom.css" type="text/css" />
+
+
+ <!-- <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="custom.css" type="text/css" />-->
+
+
+  <style>
+  nav{
+  width:100%;
+  
+  }
+  .carousel .item {
+  height: 300px;
+}
+
+.item img {
+    position: absolute;
+    top: 0;
+    left: 125px;
+	right:200px;
+    min-height: 300px;
+	min-width:900px;
+	
+}
+#bg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+#bg img {
+  position:fixed; 
+  top: 0; 
+  left:-50%; 
+   right:-50%;
+  bottom: 0; 
+  margin: auto; 
+  width: 100%;
+  height: 100%;
+}
+
+table{
+position:fixed;
+top:380px;
+left:630px;
+align:center;
+
+
+}
+<script>
+$(document).ready(function(){
+    // Activate Carousel
+    $("#myCarousel").carousel();
+    
+    // Enable Carousel Indicators
+    $(".item1").click(function(){
+        $("#myCarousel").carousel(0);
+    });
+    $(".item2").click(function(){
+        $("#myCarousel").carousel(1);
+    });
+    $(".item3").click(function(){
+        $("#myCarousel").carousel(2);
+    });
+    $(".item4").click(function(){
+        $("#myCarousel").carousel(3);
+    });
+    
+    // Enable Carousel Controls
+    $(".left").click(function(){
+        $("#myCarousel").carousel("prev");
+    });
+    $(".right").click(function(){
+        $("#myCarousel").carousel("next");
+    });
+});
+</script>
+
+	
+}
+  }
+  </style>
+  <script>
+  function myFunction() {
+	    window.open("signout.html", "_parent", "toolbar=no, scrollbars=no, resizable=no,fullsreen=no, top=500, left=500, width=400, height=400");
+	}
+	</script>
+</head>
+<body>
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-6">
+<h1><p class="text-danger" style="font-size:50px;">CodeGrader</p></h1>
+</div>
+	 <div class="col-md-6;">
+      <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+      <h1><time>00:00:00</time></h1> </ul>
+    
+     </div></div> 
+	
+      
+    </div></div>
+
+<!--<div class="container-fluid">
+<div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://www.google.com"><img src="gg.jpg" alt="Smiley face" height="30" width="30"></a></li>
+        <li><a href="https://www.facebook.com/"><img src="ff.png" alt="Smiley face" height="42" width="42"></a></li>
+        <li><a href="https://www.linkedin.com"><img src="li.png" alt="Smiley face" height="30" width="42"></a></li>
+		<li><a href="https://www.gmail.com"><img src="g.png" alt="Smiley face" height="30" width="30"></a></li>
+      </ul>
+    </div>
+
+<img src="l3.jpg" alt="Smiley face" width="200" height="100" style="float:left">
+  </div> -->    
+<nav class="navbar navbar-inverse" style="width:100%;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active" style="font-size:20px;"><a href="question1.html">1</a></li>
+        
+        <li style="font-size:20px;"><a href="question.html">2</a></li>
+          <li style="font-size:20px;"><a href="question3.html">3</a></li>
+        
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+<div class="problem">
+
+<h1 style="font-size:40px;font-style:verdana;color:#0B0B61;margin-left:0.5cm;"><u>problem 2-</u>Movie Plan </h1></br>
+<p style="font-size:30px;font-style:verdana;color:#0B0B61;margin-left:0.5cm;"><u>problem statement-</u><br><pre style="font-size:20px;font-style:verdana;">
+Little Egor is a huge movie fan. He likes watching different kinds of movies: from drama movies to comedy movies, from teen movies to 
+horror movies.He is planning to visit cinema this weekend, but he's not sure which movie he should watch.
+There are n movies to watch during this weekend. Each movie can be characterized by two integers Li and Ri,denoting the length and the 
+rating of the corresponding movie. Egor wants to watch exactly one movie with the maximal value of Li × Ri. 
+If there are several such movies, he would pick a one with the maximal Ri among them. If there is still a tie, he would pick the one 
+with the minimal index among them.
+Your task is to help Egor to pick a movie to watch during this weekend.
+
+
+<h1 style="font-size:30px;font-style:verdana;"><u>Input</u></h1>
+
+ The first line of the input contains an integer T denoting the number of test cases.
+ The first line of the test case description contains an integer n.
+ The second line of the test case description contains n integers L1, L2, ...,Ln. The following line contains n integers R1, R2, ..., Rn.
+
+<h1 style="font-size:30px;font-style:verdana;"><u>output</u></h1>
+
+ For each test case, output a single integer i denoting the index of the movie that Egor should watch during this weekend. Note that we
+ follow 1-based indexing.
+
+<h1 style="font-size:30px;font-style:verdana;"><u>Constraints</u></h1>
+<ul>
+<li>1<=T<=5</li>
+<li>1<=n<=100</li>
+<li>0<=Li,Ri<=100</li>
+</ul>
+  
+<h1 style="font-size:30px;font-style:verdana;"><u>Subtasks</u></h1>
+ 
+<b>Subtask 1: (20 points)</b>
+<ul>
+<li>1<=N<=8</li>
+ </ul>
+ <b>Subtask 2: (80 points)</b>
+<ul>
+<li>Original constraints</li>
+</ul>
+ 
+<b>Example</b>
+ 
+<b>Input:</b>
+ 2
+ 2
+ 1 2
+ 2 1
+ 4
+ 2 1 4 1
+ 2 4 1 4
+ 
+<b>output:</b>
+ 1
+ 2
+
+
+<b>Explanation:</b> 
+In the first example case, both films have the same value of L × R, but the first film has a better rating.
+In the second example case, the second and the fourth movies are equally good, but the second movie has a smaller index.
+</pre>
+</div>
+
+Select a file to upload: <br />
+<form action="UploadServlet" method="post"
+                        enctype="multipart/form-data">
+<input type="file" name="file" size="50" />
+<br />
+<input type="submit" value="Upload File" />
+</form>
+ 
+
+
+
+</body>
+</html>
