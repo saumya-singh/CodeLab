@@ -70,8 +70,8 @@ class Graph:
         return path
 
     def euclidean_distance(self, node1, node2):
-        h = math.sqrt((node1[0] - node2[0])**2 + (node1[1] - node2[1])**2)
-        return int(h)
+        heuristic = math.sqrt((node1[0] - node2[0])**2 + (node1[1] - node2[1])**2)
+        return int(heuristic)
 
     def astar_search(self, start, end):
         if start not in self.nonblock_vertices:
@@ -86,21 +86,23 @@ class Graph:
         queue_to_be_eval = PriorityQueue()
         cost[start] = 0
         came_from[start] = None
-        queue_to_be_eval.put(start, 0)
+        queue_to_be_eval.put((0, start))
         while not queue_to_be_eval.empty():
-            current_node = queue_to_be_eval.get()
+            current_node = queue_to_be_eval.get()[1]
             if current_node == end:
                 break
-            for one_connection in self.edges[current_node]:
-                new_cost = cost[current_node] + self.cost[(current_node,
-                                                           one_connection)]
-                if one_connection not in cost or \
-                        new_cost < cost[one_connection]:
-                    cost[one_connection] = new_cost
-                    came_from[one_connection] = current_node
-                    priority = cost[one_connection] + \
-                        self.euclidean_distance(one_connection, end)
-                    queue_to_be_eval.put(one_connection, priority)
+            for connection in self.edges[current_node]:
+                if connection not in vertices_covered:
+                    new_cost = cost[current_node] + self.cost[(current_node,
+                                                               connection)]
+                    if connection not in cost or \
+                            new_cost < cost[connection]:
+                        cost[connection] = new_cost
+                        came_from[connection] = current_node
+                        priority = cost[connection] + \
+                            self.euclidean_distance(connection, end)
+                        queue_to_be_eval.put((priority, connection))
+            vertices_covered.append(current_node)
         return self.path(start, end, came_from)
 
 
@@ -118,9 +120,11 @@ class MakeGrid:
         return self.init_grid
 
 
-def show_path(grid, path):
+def show_path(grid, path, start, end):
     for x, y in path:
         grid[x][y] = "*"
+    grid[start[0]][start[1]] = "S"
+    grid[end[0]][end[1]] = "E"
     for row in grid:
         for cell in row:
             print(cell, end=" ")
@@ -147,4 +151,4 @@ if __name__ == "__main__":
     end = tuple(map(int, input("Enter the end co-ordinate: ").split(",")))
     path = graph.astar_search(start, end)
     print("\n" + "="*25)
-    show_path(final_grid, path)
+    show_path(final_grid, path, start, end)
