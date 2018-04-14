@@ -1,7 +1,0 @@
-To execute the CodeGrader, these the following softwares to be installed:
-
-1. Apache Tomcat to run the website on localhost (server)
-2. Eclipse
-3. Java (JDK, JRE)
-4. Python 3 
-5. MySQL (for database management)
